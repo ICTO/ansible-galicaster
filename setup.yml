@@ -1,0 +1,12 @@
+---
+- name: "Galicaster playbook"
+  hosts: galicaster
+  user: $user
+  sudo: yes
+  sudo_user: root
+
+  vars_files:
+    - vars/galicaster.yml
+  
+  tasks:
+    - include: tasks/setup.yml

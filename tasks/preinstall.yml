@@ -1,0 +1,22 @@
+---
+# Installing galicaster dependencies from ubuntu repository
+- name: "Install galicaster dependencies from apt"
+  action: apt pkg=${item} state=installed update-cache=yes
+  with_items: ${galicaster.dependencies}
+  tags:
+    - galicaster-dependencies
+    - galicaster
+
+# Installing Pip dependency
+- name: "Installing icalendar from PIP"
+  action: pip name=icalendar state=present
+  tags:
+    - galicaster-dependencies
+    - galicaster
+
+# Create the log directory
+- name: "Creating Galicaster log directory"
+  action: file path=/var/log/galicaster owner=icto group=icto mode=0755 state=directory
+  tags:
+    - galicaster-dependencies
+    - galicaster

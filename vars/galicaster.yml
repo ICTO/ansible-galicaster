@@ -1,0 +1,22 @@
+---
+galicaster:
+  dependencies:
+    - 'python'
+    - 'python-gtk2'
+    - 'python-gst0.10'
+    - 'libgtk2.0-0'
+    - 'libgstreamer0.10-0'
+    - 'gstreamer0.10-ffmpeg'
+    - 'gstreamer0.10-alsa'
+    - 'gstreamer0.10-plugins-bad'
+    - 'gstreamer0.10-plugins-bad-multiverse'
+    - 'gstreamer0.10-plugins-base'
+    - 'gstreamer0.10-plugins-base-apps'
+    - 'gstreamer0.10-plugins-good'
+    - 'gstreamer0.10-plugins-ugly'
+    - 'python-pip'
+    - 'python-setuptools'
+    - 'python-pycurl'
+    - 'v4l-conf'
+    - 'v4l-utils'
+    - 'guvcview'

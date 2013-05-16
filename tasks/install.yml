@@ -1,0 +1,7 @@
+---
+# Checkout galicaster repo for specific tag defined in vars
+- name: "Checkout Galicaster code"
+  action: git repo=git://github.com/teltek/Galicaster.git dest=/home/icto/Galicaster version=${galicaster.version} force=no
+  tags:
+    - galicaster-install
+    - galicaster
