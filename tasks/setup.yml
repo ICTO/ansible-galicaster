@@ -1,12 +1,12 @@
 ---
 # Install galicaster requirements
-- include: tasks/preinstall.yml
+- include: preinstall.yml
 
 # Install Galicaster
-- include: tasks/install.yml
+- include: install.yml
 
 # Configure galicaster
-- include: tasks/config.yml
+- include: config.yml
 
 # Postinstall of galicaster
-- include: tasks/postinstall.yml
+# - include: postinstall.yml

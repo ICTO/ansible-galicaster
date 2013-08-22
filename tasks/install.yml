@@ -1,7 +1,14 @@
 ---
-# Checkout galicaster repo for specific tag defined in vars
+# Download galicaster installation package
 - name: "Checkout Galicaster code"
-  action: git repo=git://github.com/teltek/Galicaster.git dest=/home/icto/Galicaster version=${galicaster.version} force=no
+  action: get_url url={{ galicaster.package_url }} dest=/tmp/galicaster.deb
+  tags:
+    - galicaster-install
+    - galicaster
+
+# Install deb package
+- name: "Installing galicaster deb package"
+  command: /usr/bin/dpkg --install /tmp/galicaster.deb
   tags:
     - galicaster-install
     - galicaster

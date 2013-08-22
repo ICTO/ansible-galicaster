@@ -1,5 +1,5 @@
 ---
-galicaster:
+galicaster_install:
   dependencies:
     - 'python'
     - 'python-gtk2'
@@ -20,3 +20,4 @@ galicaster:
     - 'v4l-conf'
     - 'v4l-utils'
     - 'guvcview'
+    - 'ivtv-utils'

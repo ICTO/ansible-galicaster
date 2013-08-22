@@ -7,6 +7,6 @@
 
   vars_files:
     - vars/galicaster.yml
-  
+
   tasks:
     - include: tasks/setup.yml
