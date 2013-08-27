@@ -1,7 +1,7 @@
 ---
 # Create the config file for galicaster
 - name: "Creating the config file"
-  template: src="templates/conf.ini" dest=/etc/galicaster/conf.ini owner=icto group=icto mode=0644
+  template: src="templates/conf.ini" dest=/etc/galicaster/conf.ini owner={{ galicaster.user }} group={{ galicaster.group }} mode=0644
   tags:
     - galicaster-conf
     - galicaster
