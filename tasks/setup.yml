@@ -8,5 +8,3 @@
 # Configure galicaster
 - include: config.yml
 
-# Postinstall of galicaster
-# - include: postinstall.yml
