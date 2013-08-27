@@ -16,7 +16,7 @@
 
 # Create the log directory
 - name: "Creating Galicaster log directory"
-  file: path=/var/log/galicaster owner=icto group=icto mode=0755 state=directory
+  file: path=/var/log/galicaster owner={{ galicaster.user }} group={{ galicaster.group }} mode=0755 state=directory
   tags:
     - galicaster-dependencies
     - galicaster
