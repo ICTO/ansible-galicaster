@@ -1,7 +1,7 @@
 ---
 # Download galicaster installation package
 - name: "Checkout Galicaster code"
-  action: get_url url={{ galicaster.package_url }} dest=/tmp/galicaster.deb
+  get_url: url={{ galicaster_package }} force=yes dest=/tmp/galicaster.deb
   tags:
     - galicaster-install
     - galicaster
