@@ -14,6 +14,13 @@
     - galicaster-dependencies
     - galicaster
 
+# Installing Pip dependency
+- name: "Installing bottle from PIP"
+  pip: name=bottle state=present
+  tags:
+    - galicaster-dependencies
+    - galicaster
+
 # Create the log directory
 - name: "Creating Galicaster log directory"
   file: path=/var/log/galicaster owner={{ galicaster.user }} group={{ galicaster.group }} mode=0755 state=directory
