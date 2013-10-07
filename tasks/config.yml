@@ -5,3 +5,12 @@
   tags:
     - galicaster-conf
     - galicaster
+
+# Adding profiles defined in config
+- name: "Adding extra profiles to capture agent"
+  copy: src=../../../files/profiles/{{ item }} dest=/etc/galicaster/profiles/{{ item }}.ini owner=icto group=icto mode=0644
+  when: galicaster.profiles is defined
+  with_items: galicaster.profiles
+  tags:
+    - galicaster-conf
+    - galicaster
