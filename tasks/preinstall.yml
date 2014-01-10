@@ -1,7 +1,7 @@
 ---
 # Installing galicaster dependencies from ubuntu repository
 - name: "Install galicaster dependencies from apt"
-  apt: pkg=${item} state=installed update-cache=yes
+  apt: pkg=${item} state=installed update_cache=yes
   with_items: ${galicaster_install.dependencies}
   tags:
     - galicaster-dependencies
