@@ -17,6 +17,7 @@ galicaster_install:
     - 'python-pip'
     - 'python-setuptools'
     - 'python-pycurl'
+    - 'python-bottle'
     - 'v4l-conf'
     - 'v4l-utils'
     - 'guvcview'
