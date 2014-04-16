@@ -4,6 +4,7 @@ galicaster_install:
     - 'python'
     - 'python-gtk2'
     - 'python-gst0.10'
+    - 'python-glade2'
     - 'libgtk2.0-0'
     - 'libgstreamer0.10-0'
     - 'gstreamer0.10-ffmpeg'
