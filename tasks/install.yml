@@ -8,7 +8,7 @@
 
 # Install deb package
 - name: "Installing galicaster deb package"
-  command: /usr/bin/dpkg --install /tmp/galicaster.deb
+  command: /usr/bin/dpkg --force-confold --install /tmp/galicaster.deb
   tags:
     - galicaster-install
     - galicaster
