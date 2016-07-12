@@ -1,10 +1,14 @@
 ---
 # Install galicaster requirements
 - include: preinstall.yml
+  when: galicaster.version == 1
+
+# Add galicaster 2 repistory
+- include: repository.yml
+  when: galicaster.version == 2
 
 # Install Galicaster
 - include: install.yml
 
 # Configure galicaster
 - include: config.yml
-

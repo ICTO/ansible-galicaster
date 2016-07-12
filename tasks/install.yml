@@ -2,6 +2,7 @@
 # Download galicaster installation package
 - name: "Checkout Galicaster code"
   get_url: url={{ galicaster_package }} force=yes dest=/tmp/galicaster.deb
+  when: galicaster.version == 1
   tags:
     - galicaster-install
     - galicaster
@@ -9,6 +10,14 @@
 # Install deb package
 - name: "Installing galicaster deb package"
   command: /usr/bin/dpkg --force-confold --install /tmp/galicaster.deb
+  when: galicaster.version == 1
+  tags:
+    - galicaster-install
+    - galicaster
+
+# Install galicaster from repository
+- apt: name=galicaster state=present
+  when: galicaster.version == 2
   tags:
     - galicaster-install
     - galicaster

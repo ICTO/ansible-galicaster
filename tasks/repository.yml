@@ -1,0 +1,6 @@
+---
+- apt: name=apt-transport-https state=present
+
+- apt_key: url=https://packages.galicaster.org/apt/galicaster.gpg.key state=present
+
+- apt_repository: repo='deb https://packages.galicaster.org/apt xenial main' update_cache=yes state=present
