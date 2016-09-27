@@ -16,7 +16,7 @@
     - galicaster
 
 # Install galicaster from repository
-- apt: name=galicaster state=present
+- apt: name=galicaster state=latest
   when: galicaster.version == 2
   tags:
     - galicaster-install
